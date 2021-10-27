@@ -1,0 +1,23 @@
+{
+  "builders": [
+    {
+      "type": "virtualbox-ovf",
+      "source_path": "/apps/tfc/WindowsServer2019.ovf",
+      "output_directory": "./output-matlab/",
+      "vm_name": "win2019-matlab"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "powershell",
+      "inline": [
+        "echo 'Do windows updates here'"
+      ]
+    },
+    {
+      "type": "file",
+      "source": "/apps/MATLAB/R2021a",
+      "destination": "C:\\tmp\\"
+    },
+  ]
+}
