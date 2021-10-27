@@ -1,9 +1,10 @@
 {
   "builders": [
     {
-      "type": "vagrant",
-      "source_path": "/apps/tfc/windows_2019_virtualbox.box",
-      "provider": "virtualbox",
+      "type": "virtualbox-ovf",
+      "source_path": "./output-virtualbox-iso/WindowsServer2019.ovf",
+      "output_directory": "./output-matlab/",
+      "vm_name": "win2019-matlab",
       "communicator": "winrm",
       "winrm_password": "vagrant",
       "winrm_timeout": "6h",
