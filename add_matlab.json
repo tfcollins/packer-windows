@@ -1,8 +1,8 @@
 {
   "builders": [
     {
-      "type": "virtualbox-ovf",
-      "source_path": "/apps/tfc/WindowsServer2019.ovf",
+      "type": "vagrant",
+      "source_path": "./windows_2019_virtualbox.box",
       "output_directory": "./output-matlab/",
       "vm_name": "win2019-matlab",
       "communicator": "winrm",
